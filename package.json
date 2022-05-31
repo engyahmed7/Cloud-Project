@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/basir/amazona.git"
+    "url": "https://github.com/engyahmed7/Cloud-Project"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/basir/amazona/issues"
   },
-  "homepage": "https://github.com/basir/amazona#readme",
+  "homepage": "",
   "devDependencies": {
     "eslint": "^7.9.0",
     "eslint-plugin-react": "^7.21.2",
