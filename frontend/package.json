@@ -1,10 +1,10 @@
 {
   "name": "frontend",
-  "proxy": "http://127.0.0.1:5000",
+  "proxy": "http://web:3001",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
