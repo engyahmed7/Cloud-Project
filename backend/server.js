@@ -15,15 +15,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-<<<<<<< HEAD
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://mongodb/amazona');
-app.use('/api/uploads', uploadRouter);
-app.use('/api/users', userRouter);
-app.use('/api/products', productRouter);
-app.use('/api/orders', orderRouter);
-app.get('/api/config/paypal', (req, res) => {
-  res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
-=======
 mongoose.connect(process.env.MONGODB_URL || "mongodb://mongodb/amazona");
 app.use("/api/uploads", uploadRouter);
 app.use("/api/users", userRouter);
@@ -31,25 +22,16 @@ app.use("/api/products", productRouter);
 app.use("/api/orders", orderRouter);
 app.get("/api/config/paypal", (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || "sb");
->>>>>>> 478d5069cae95a28b53bb794fb2a52563e3d574e
 });
 app.get("/api/config/google", (req, res) => {
   res.send(process.env.GOOGLE_API_KEY || "");
 });
 const __dirname = path.resolve();
-<<<<<<< HEAD
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 app.use(express.static(path.join(__dirname, "/frontend/build")));
 app.get("*", (req, res) =>
   res.sendFile(path.join(__dirname, "/frontend/build/index.html"))
 );
-=======
-app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
-app.use(express.static(path.join(__dirname, '/frontend/build')));
-// app.get('*', (req, res) =>
-//   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
-// ); 
->>>>>>> 016064f7d6e7d4fe26d425926e776b12a28e6f96
 // app.get('/', (req, res) => {
 //   res.send('Server is ready');
 // });
@@ -135,7 +117,3 @@ io.on("connection", (socket) => {
 httpServer.listen(port, () => {
   console.log(`Serve at http://localhost:${port}`);
 });
-
-// app.listen(port, () => {
-//   console.log(`Serve at http://localhost:${port}`);
-// });
