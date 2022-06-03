@@ -6,10 +6,20 @@ services:
     image: mongo:5.0
     ports:
       - "27018:27017"
+<<<<<<< HEAD
+=======
+
+      - "27017:27017"
+
+>>>>>>> f30d660068ba1ac0b109eb8d35f97184c03afec0
     volumes:
       - ./:/data/db
     environment:
       MONGO_INITDB_DATABASE: amazona
+<<<<<<< HEAD
+=======
+
+>>>>>>> f30d660068ba1ac0b109eb8d35f97184c03afec0
   web:
     container_name: backEnd
     build:
@@ -30,3 +40,4 @@ services:
       - "3000:3000"
     depends_on:
       - web
+
